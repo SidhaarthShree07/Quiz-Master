@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Monthly Quiz Activity Report</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0; background: #232b3b; font-family: 'Orbitron', sans-serif; color: #ffffff;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background: #232b3b; min-height: 100vh; padding: 20px;">
+    <tr>
+      <td align="center">
+        <table width="700" cellpadding="0" cellspacing="0" style="background: rgba(255,255,255,0.08); border-radius: 24px; box-shadow: 0 0 24px 8px rgba(79,209,197,0.10); color: #ffffff; padding: 40px 20px; text-align: center;">
+          <tr>
+            <td>
+              <h2 style="font-size: 22px; font-weight: 700; letter-spacing: 0.12em; color: #ffffff; text-shadow: 0 2px 16px rgba(79,209,197,0.18); margin-bottom: 10px;">Monthly Quiz Activity Report</h2>
+              <p style="font-size: 16px; font-weight: 400; margin-bottom: 30px;">Hello {{name}}, here is your activity report for {{month_year}}:</p>
+
+              <!-- Stats Cards (as table layout) -->
+              <table width="100%" cellpadding="10" cellspacing="0" style="margin-bottom: 30px;">
+                <tr>
+                  <td align="center" valign="top" style="width: 33.33%;">
+                    <div style="background: rgba(255,255,255,0.08); border-radius: 20px; padding: 20px; box-shadow: 0 0 16px 4px rgba(79,209,197,0.10);">
+                      <div style="color: #4fd1c5; font-size: 20px; margin-bottom: 10px;"><i class="fa-solid fa-list-check"></i></div>
+                      <div style="color: #4fd1c5; font-size: 14px; margin-bottom: 5px;">Total Quizzes</div>
+                      <div style="font-size: 24px; font-weight: 700;">{{total_quizzes}}</div>
+                    </div>
+                  </td>
+                  <td align="center" valign="top" style="width: 33.33%;">
+                    <div style="background: rgba(255,255,255,0.08); border-radius: 20px; padding: 20px; box-shadow: 0 0 16px 4px rgba(79,209,197,0.10);">
+                      <div style="color: #4fd1c5; font-size: 20px; margin-bottom: 10px;"><i class="fa-solid fa-chart-column"></i></div>
+                      <div style="color: #4fd1c5; font-size: 14px; margin-bottom: 5px;">Average Score</div>
+                      <div style="font-size: 24px; font-weight: 700;">{{avg_score}}</div>
+                    </div>
+                  </td>
+                  <td align="center" valign="top" style="width: 33.33%;">
+                    <div style="background: rgba(255,255,255,0.08); border-radius: 20px; padding: 20px; box-shadow: 0 0 16px 4px rgba(79,209,197,0.10);">
+                      <div style="color: #4fd1c5; font-size: 20px; margin-bottom: 10px;"><i class="fa-solid fa-medal"></i></div>
+                      <div style="color: #4fd1c5; font-size: 14px; margin-bottom: 5px;">Ranking</div>
+                      <div style="font-size: 24px; font-weight: 700;">{{user_rank}}</div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Quiz Details Table -->
+              <h3 style="font-size: 18px; font-weight: 700; color: #d6e0df; margin-bottom: 10px;">Quiz Details:</h3>
+              <table width="100%" cellpadding="10" cellspacing="0" style="background: rgba(30, 30, 30, 0.10); border-radius: 12px; text-align: center;">
+                <tr style="background: rgba(79,209,197,0.18);">
+                  <th style="color: #4fd1c5; font-size: 16px;">Quiz Name</th>
+                  <th style="color: #4fd1c5; font-size: 16px;">Score</th>
+                  <th style="color: #4fd1c5; font-size: 16px;">Status</th>
+                </tr>
+                {{quiz_rows}}
+              </table>
+
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!-- FontAwesome CDN (some clients may ignore icons) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
